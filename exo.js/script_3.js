@@ -2,9 +2,10 @@ const number = parseInt(prompt("Salut, bienvenue dans ma super pyramide ! Combie
 
 console.log("Voici la pyramide :")
 for (let count = 1; count <= number; count++) {
-    output(count);
+  for (var j = 1; j <= count; j++)
+    output += j + ' ';
 }
+console.log(output);
+output = '';
 
-function output(count) {
-  console.log(`${"#" * count}`);
-}
+

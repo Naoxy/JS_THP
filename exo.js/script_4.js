@@ -24,9 +24,12 @@ const index = entrepreneurs.filter((years) => years.year >= 1970 && years.year <
 console.table(index); */
 
 
-//Sors un array qui contient prénom - nom 
-const old = entrepreneurs.filter((justName) => justName.first && justName.last)
-console.table(old);
+/* //Sors un array qui contient prénom - nom 
+delete entrepreneurs.year;
+console.table(entrepreneurs); */
+
+
+//quel age aurait chaque inventeur aujourdhui
 
 
 
