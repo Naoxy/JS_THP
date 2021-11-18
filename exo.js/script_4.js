@@ -19,9 +19,19 @@ const entrepreneurs = [
   { first: 'Peter', last: 'Thiel', year: 1967 }
 ];
 
+/* //entrepreuneurs né ds les années 1970
+const index = entrepreneurs.filter((years) => years.year >= 1970 && years.year <= 1980)
+console.table(index); */
 
-//Trier par nom de famille 
+
+//Sors un array qui contient prénom - nom 
+const old = entrepreneurs.filter((justName) => justName.first && justName.last)
+console.table(old);
+
+
+
+/* //Trier par nom de famille 
 entrepreneurs.sort((a,b) => (a.last > b.last) ? 1 : ((b.last> a.last) ? -1 : 0)); 
-console.table(entrepreneurs);
+console.table(entrepreneurs); */
 
 
