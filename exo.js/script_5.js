@@ -25,9 +25,11 @@ console.table(books);
 
 
 //trouve le livre l'id:873495
-
+console.log(books[2])
 
 //supprime le livre id:133712
+
+
 
 
 //trier livre par ordre alphabetique sans l'id supp
