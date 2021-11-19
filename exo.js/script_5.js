@@ -14,9 +14,19 @@ const books = [
 ];
 
 //tt les livres empreinté une fois 
+for(let book in books){
+  if (books[book].rented > 0){
+  resultat = true
+  }else if(books[book].rented === 0)
+  {
+    resultat = false
+    break
+  }
+};
 
 
 //livre le plus empreinté 
+
 
 
 //le moins empreinté
