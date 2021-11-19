@@ -12,3 +12,24 @@ const books = [
   { title: 'Voyage au centre de la Terre', id: 4656388, rented: 38 },
   { title: 'Guerre et Paix', id: 748147, rented: 19 }
 ];
+
+//tt les livres empreinté une fois 
+
+
+//livre le plus empreinté 
+
+
+//le moins empreinté
+books.sort((a,b) => (a.rented > b.rented) ? 1 : ((b.rented > a.rented) ? -1 : 0)); 
+console.table(books);
+
+
+//trouve le livre l'id:873495
+
+
+//supprime le livre id:133712
+
+
+//trier livre par ordre alphabetique sans l'id supp
+books.sort((a,b) => (a.title > b.title) ? 1 : ((b.title > a.title) ? -1 : 0)); 
+console.table(books);
