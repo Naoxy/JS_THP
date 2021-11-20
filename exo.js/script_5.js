@@ -44,7 +44,7 @@ function max_rented_book(books) {
   console.log(max, "fois", "le titre du livre le plus est:", name); //Ce que la console nous renvois 
 }
 
-function min_rented_book(books) {
+function min_rented_book(books) { 
   //On crée une fonction min_rented_book ds l'array books
   let a = 0;
   let min = books[0].rented;
@@ -66,11 +66,28 @@ min_rented_book(books);
 
 
 //trouve le livre l'id:873495
-console.log(books[2])
+function find_id(book) {
+  //On créer une fonction find_id pour regarder dans books 
+  return book.id == 873495;
+} //trouve l'id dont j'ai besoin 
+let b = books.find(find_id);
+console.log(`Le livre avec cet id, 873495 est: ${b.title}`); //il me donne ds la console le livre avec l'id qui correspond
+
+
 
 //supprime le livre id:133712
+let removed; //On créer une variable removed
 
-
+for (let i = 0; i < books.length; i++) {
+  //Il va regarder ds books 
+  if (books[i].id === 133712) {
+    //Cherche ds books l'id qui correspond à celui rechercher
+    removed = books.splice(0, 1); // On lui demande de le supprimer de la database 
+  }
+}
+console.log(`Le livre avec l'id: ${removed[0].id}, appelé: ${removed[0].title}`);
+//La console renvoie 
+console.log(removed);
 
 
 //trier livre par ordre alphabetique sans l'id supp

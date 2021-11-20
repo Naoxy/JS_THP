@@ -1,32 +1,17 @@
-const ask = parseInt(prompt('Pose ta question: '));
+var ask = prompt("Pose ta question: ");
 
-askNew = 1; //teste avec plusieurs valeurs
-switch (askNew) {
-  case '?':
-    console.log("Ouais Ouais...");
-    break;
-  case 2:
-    console.log("Pwa, calme-toi...");
-    break;
-  case 'Fortnite':
-    console.log("on s\' fait une partie soum-soum ?");
-    break;
-  case ' ':
-    console.log("t'es en PLS ?");
-    break;
-  default:
-    console.log("balek.");
-    break;
+
+if (ask.indexOf("?")) {
+  console.log("Ouais Ouais...");
+} else if (ask.toUpperCase()) {
+  console.log("Pwa, calme-toi...");
+} else if (ask.indexOf("Fortnite")) {
+  console.log("on s' fait une partie soum-soum ?");
+} else if (ask === " ") {
+  console.log("t'es en PLS ?");
+} else {
+  console.log("balek.");
 }
-
-
-
-
-
-
-
-
-
 
 
 
