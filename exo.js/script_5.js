@@ -26,12 +26,43 @@ for(let book in books){
 
 
 //livre le plus empreinté 
+function max_rented_book(books) {
+  //func max_rented dans l'array books
+  let a = 0;
+  let max = 0;
+  let name = "";
 
+  while (a < books.length) {
+    //tant que a est strictement plus petit que la longueur de books
+    if (books[a].rented > max) {
+      //on va chercher dans books le livre le plus emprunté 
+      max = books[a].rented; //max ns renvoie le nombre de fois emprunté
+      name = books[a].title; //name le nom du livre associé 
+    }
+    a++; //Fais défilé ds books jusqu'à arriver à la fin const
+  }
+  console.log(max, "fois", "le titre du livre le plus est:", name); //Ce que la console nous renvois 
+}
 
-
-//le moins empreinté
-books.sort((a,b) => (a.rented > b.rented) ? 1 : ((b.rented > a.rented) ? -1 : 0)); 
-console.table(books);
+function min_rented_book(books) {
+  //On crée une fonction min_rented_book ds l'array books
+  let a = 0;
+  let min = books[0].rented;
+  let name = books[0].title;
+  
+  while (a < books.length) {
+    //Tant que a est strictement plus petit que la longueur de books
+    if (books[a].rented < min) {
+      //On va chercher ds books le livre le moins  emprunté 
+      min = books[a].rented; //min nous renvois le nombre de fois emprunté 
+      name = books[a].title; // name le nom du livre associé 
+    }
+    a++; 
+  }
+  console.log(min, "fois", "le titre du livre le moins emprunté est:", name);
+}
+max_rented_book(books); 
+min_rented_book(books);
 
 
 //trouve le livre l'id:873495
